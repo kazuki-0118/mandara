@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC54FE2C4F8EEF83C81F1DFA /* Pods_mandara.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9A53A1E824FAF31D1AAFFF /* Pods_mandara.framework */; };
 		D49C654B25EB64F900B342FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C654A25EB64F900B342FA /* AppDelegate.swift */; };
 		D49C654D25EB64F900B342FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C654C25EB64F900B342FA /* SceneDelegate.swift */; };
 		D49C654F25EB64F900B342FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C654E25EB64F900B342FA /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30B61FC88316AF6046190137 /* Pods-mandara.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mandara.release.xcconfig"; path = "Target Support Files/Pods-mandara/Pods-mandara.release.xcconfig"; sourceTree = "<group>"; };
+		5B8AA8A1E69CCD0056E20C40 /* Pods-mandara.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mandara.debug.xcconfig"; path = "Target Support Files/Pods-mandara/Pods-mandara.debug.xcconfig"; sourceTree = "<group>"; };
+		7F9A53A1E824FAF31D1AAFFF /* Pods_mandara.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mandara.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49C654725EB64F900B342FA /* mandara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mandara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49C654A25EB64F900B342FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49C654C25EB64F900B342FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC54FE2C4F8EEF83C81F1DFA /* Pods_mandara.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98C39047AD4FD843A47EE8A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F9A53A1E824FAF31D1AAFFF /* Pods_mandara.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0EC530757D1FEB02FDCEE18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B8AA8A1E69CCD0056E20C40 /* Pods-mandara.debug.xcconfig */,
+				30B61FC88316AF6046190137 /* Pods-mandara.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D49C653E25EB64F900B342FA = {
 			isa = PBXGroup;
 			children = (
 				D49C654925EB64F900B342FA /* mandara */,
 				D49C654825EB64F900B342FA /* Products */,
+				C0EC530757D1FEB02FDCEE18 /* Pods */,
+				98C39047AD4FD843A47EE8A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D49C655B25EB64F900B342FA /* Build configuration list for PBXNativeTarget "mandara" */;
 			buildPhases = (
+				34F7A775040E32FC1355C2A3 /* [CP] Check Pods Manifest.lock */,
 				D49C654325EB64F900B342FA /* Sources */,
 				D49C654425EB64F900B342FA /* Frameworks */,
 				D49C654525EB64F900B342FA /* Resources */,
+				755F171936E7DDC82BEDEEC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34F7A775040E32FC1355C2A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mandara-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		755F171936E7DDC82BEDEEC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mandara/Pods-mandara-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mandara/Pods-mandara-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mandara/Pods-mandara-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D49C654325EB64F900B342FA /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		D49C655C25EB64F900B342FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B8AA8A1E69CCD0056E20C40 /* Pods-mandara.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		D49C655D25EB64F900B342FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30B61FC88316AF6046190137 /* Pods-mandara.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
