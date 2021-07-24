@@ -1205,14 +1205,12 @@
                                     <action selector="titlebuttontap:" destination="0J1-Dw-K7R" eventType="touchUpInside" id="iGe-hJ-ItX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckh-Kb-pmA">
-                                <rect key="frame" x="10" y="665" width="394" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGA-EG-isq">
+                                <rect key="frame" x="10" y="665" width="394" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="compleationbuttontap:" destination="0J1-Dw-K7R" eventType="touchUpInside" id="x1G-wr-inn"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wvo-FX-QNr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1220,6 +1218,7 @@
                             <constraint firstItem="AN2-C0-si2" firstAttribute="centerY" secondItem="FMc-ZM-IK9" secondAttribute="centerY" id="4tW-3U-pEV"/>
                             <constraint firstItem="AN2-C0-si2" firstAttribute="centerX" secondItem="FMc-ZM-IK9" secondAttribute="centerX" id="CAn-vX-fWU"/>
                             <constraint firstItem="wvo-FX-QNr" firstAttribute="trailing" secondItem="6Ux-bR-pYD" secondAttribute="trailing" constant="10" id="GzQ-y3-81x"/>
+                            <constraint firstItem="wvo-FX-QNr" firstAttribute="trailing" secondItem="OGA-EG-isq" secondAttribute="trailing" constant="10" id="IzI-op-A17"/>
                             <constraint firstItem="4Zz-JO-JcV" firstAttribute="leading" secondItem="wvo-FX-QNr" secondAttribute="leading" constant="10" id="P0e-DR-Zg9"/>
                             <constraint firstItem="6Ux-bR-pYD" firstAttribute="leading" secondItem="wvo-FX-QNr" secondAttribute="leading" constant="10" id="SV8-wY-CaZ"/>
                             <constraint firstItem="Zaa-8q-DTh" firstAttribute="leading" secondItem="wvo-FX-QNr" secondAttribute="leading" constant="10" id="SlS-tf-YDK"/>
@@ -1227,11 +1226,10 @@
                             <constraint firstItem="wvo-FX-QNr" firstAttribute="trailing" secondItem="4Zz-JO-JcV" secondAttribute="trailing" constant="10" id="e26-bK-h2f"/>
                             <constraint firstItem="wvo-FX-QNr" firstAttribute="trailing" secondItem="Zaa-8q-DTh" secondAttribute="trailing" constant="10" id="erM-9g-Zmm"/>
                             <constraint firstItem="4Zz-JO-JcV" firstAttribute="top" secondItem="wvo-FX-QNr" secondAttribute="top" constant="10" id="h3o-9a-qKu"/>
-                            <constraint firstItem="Ckh-Kb-pmA" firstAttribute="leading" secondItem="wvo-FX-QNr" secondAttribute="leading" constant="10" id="hLv-tt-7z3"/>
                             <constraint firstItem="6Ux-bR-pYD" firstAttribute="top" secondItem="Zaa-8q-DTh" secondAttribute="bottom" constant="10" id="ivX-Rf-G4c"/>
                             <constraint firstItem="Zaa-8q-DTh" firstAttribute="top" secondItem="4Zz-JO-JcV" secondAttribute="bottom" constant="10" id="otu-kC-w5I"/>
-                            <constraint firstItem="wvo-FX-QNr" firstAttribute="trailing" secondItem="Ckh-Kb-pmA" secondAttribute="trailing" constant="10" id="qVH-hB-YcP"/>
-                            <constraint firstItem="Ckh-Kb-pmA" firstAttribute="top" secondItem="AN2-C0-si2" secondAttribute="bottom" constant="10" id="uof-hy-fvi"/>
+                            <constraint firstItem="OGA-EG-isq" firstAttribute="top" secondItem="AN2-C0-si2" secondAttribute="bottom" constant="10" id="qAH-GH-bpE"/>
+                            <constraint firstItem="OGA-EG-isq" firstAttribute="leading" secondItem="wvo-FX-QNr" secondAttribute="leading" constant="10" id="ys9-hm-GqT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wo6-DQ-nUQ">
@@ -1324,7 +1322,7 @@
                         <outlet property="btn98" destination="26X-qx-dqO" id="WEO-GU-iqB"/>
                         <outlet property="btn99" destination="7gu-no-fjP" id="A6B-9d-Qut"/>
                         <outlet property="categorybutton" destination="Zaa-8q-DTh" id="2pX-9F-0zE"/>
-                        <outlet property="compleationdatebutton" destination="Ckh-Kb-pmA" id="aJt-Vi-e0F"/>
+                        <outlet property="compleationdateTextField" destination="OGA-EG-isq" id="bWF-td-gIs"/>
                         <outlet property="datelabel" destination="4Zz-JO-JcV" id="jNc-Ou-9oV"/>
                         <outlet property="stackall" destination="AN2-C0-si2" id="Npe-lV-ncG"/>
                         <outlet property="titlebutton" destination="6Ux-bR-pYD" id="7aO-tH-KBu"/>

@@ -99,10 +99,12 @@ class MandaraViewController: UIViewController {
     @IBOutlet weak var datelabel: UILabel!
     @IBOutlet weak var categorybutton: UIButton!
     @IBOutlet weak var titlebutton: UIButton!
-    @IBOutlet weak var compleationdatebutton: UIButton!
     
-    //日付
-    let datePicker = UIDatePicker()
+    //UITextfieldに紐づいてる
+    @IBOutlet weak var compleationdateTextField: UITextField!
+    //UIDatePickerを定義するための変数
+    var datePicker2: UIDatePicker = UIDatePicker()
+
     
     
     //viewDidLoad
@@ -123,9 +125,8 @@ class MandaraViewController: UIViewController {
         //completiondateの表示
         let formatter2 = DateFormatter()
         formatter2.dateFormat = "yyyy-MM-dd"
-
         let dateString2:String = formatter.string(from: mandara.completiondate)
-        compleationdatebutton.setTitle("完了予定日:\(dateString2)", for: .normal)
+        compleationdateTextField.text = "完了予定日:\(dateString2)"
         
         
         //カテゴリー表示、タイトル表示
@@ -137,12 +138,12 @@ class MandaraViewController: UIViewController {
         //角丸
         categorybutton.layer.cornerRadius = 10.0
         titlebutton.layer.cornerRadius = 10.0
-        compleationdatebutton.layer.cornerRadius = 10.0
+
         
         // タイトルの色
         categorybutton.setTitleColor(UIColor.black, for: UIControl.State.normal)
         titlebutton.setTitleColor(UIColor.black, for: UIControl.State.normal)
-        compleationdatebutton.setTitleColor(UIColor.black, for: UIControl.State.normal)
+
         //buttonの設定
 
         btn11.setTitle(mandara.item11, for: .normal)
@@ -259,7 +260,21 @@ class MandaraViewController: UIViewController {
                         action: #selector(transitionToNextViewController(sender:)),
                         for: .touchUpInside)}
            }
-        
+                    // ピッカー設定
+                    datePicker2.datePickerMode = UIDatePicker.Mode.date
+                    datePicker2.timeZone = NSTimeZone.local
+                    datePicker2.locale = Locale.current
+                    datePicker2.preferredDatePickerStyle = .wheels
+                    compleationdateTextField.inputView = datePicker2
+                     // 決定バーの生成
+                    let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35))
+                    let spacelItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+                    let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+                    toolbar.setItems([spacelItem, doneItem], animated: true)
+
+                     // インプットビュー設定(紐づいているUITextfieldへ代入)
+                     compleationdateTextField.inputView = datePicker2
+                     compleationdateTextField.inputAccessoryView = toolbar
     }
  
     override func viewWillAppear(_ animated: Bool) {
@@ -538,60 +553,22 @@ class MandaraViewController: UIViewController {
                 })
         self.present(alert, animated: true, completion: nil)
         }
-    @IBAction func compleationbuttontap(_ sender: Any) {
-        print("compleationDateボタン押されました！")
-        
-        var alertTextField: UITextField?
-        
-        // DatePickerModeをDate(日付)に設定
-        datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .wheels
-        
-        
-        // textFieldのinputViewにdatepickerを設定
-        alertTextField?.inputView = datePicker
-        
-        
-        // UIToolbarを設定
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        alertTextField?.inputAccessoryView = toolbar
-        
-
-        let alert = UIAlertController(
-        title: "Edit",
-        message: "Enter new CompleationDate",
-        preferredStyle: UIAlertController.Style.alert)
-        alert.addTextField(
-        configurationHandler: {(textField: UITextField!) in
-        alertTextField = textField
-        //タップされたボタンのタグを識別する
-        textField.text = self.titlebutton.currentTitle
-         })
-        
-        //キャンセルの時のアクション
-        alert.addAction(
-        UIAlertAction(
-        title: "Cancel",
-        style: UIAlertAction.Style.cancel,
-        handler: nil))
-
-        //OKの時のアクション
-        alert.addAction(
-        UIAlertAction(
-        title: "OK",
-        style: UIAlertAction.Style.default) { _ in
-        
-        if let text = alertTextField?.text {
-        try! self.realm.write {self.mandara.projectName = text}
+    
+        @objc func done(){
+        compleationdateTextField.endEditing(true)
+            
+            try! realm.write {
+                self.mandara.completiondate = self.datePicker2.date
+            }
+       
+            //completiondateの表示
+            let formatter2 = DateFormatter()
+            formatter2.dateFormat = "yyyy-MM-dd"
+            let dateString2:String = formatter2.string(from: mandara.completiondate)
+            compleationdateTextField.text = "完了予定日:\(dateString2)"
+            
         }
-        self.titlebutton.setTitle(self.mandara.projectName, for: .normal)
-
-        })
-        self.present(alert, animated: true, completion: nil)
-        
-    }
-
+    
         
     }
 
