@@ -3,31 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AC54FE2C4F8EEF83C81F1DFA /* Pods_mandara.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F9A53A1E824FAF31D1AAFFF /* Pods_mandara.framework */; };
+		D46E0A602606EE7300836773 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E0A5E2606EE7300836773 /* PostTableViewCell.swift */; };
+		D46E0A612606EE7300836773 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46E0A5F2606EE7300836773 /* PostTableViewCell.xib */; };
+		D46E0A642606F7F400836773 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E0A632606F7F400836773 /* HomeViewController.swift */; };
+		D46FC1F82605E2D800A7A8DA /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46FC1F72605E2D800A7A8DA /* Temp.swift */; };
+		D48DA23626064E9B00880126 /* projectInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DA23526064E9B00880126 /* projectInputViewController.swift */; };
+		D48E4E6125F3BD1A00D7C9B8 /* MandaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E4E6025F3BD1A00D7C9B8 /* MandaraViewController.swift */; };
+		D48E4E6425F3BE6600D7C9B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48E4E6325F3BE6600D7C9B8 /* Main.storyboard */; };
+		D48E4E6725F3D05C00D7C9B8 /* MandaraItemInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E4E6625F3D05C00D7C9B8 /* MandaraItemInputViewController.swift */; };
 		D49C654B25EB64F900B342FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C654A25EB64F900B342FA /* AppDelegate.swift */; };
 		D49C654D25EB64F900B342FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C654C25EB64F900B342FA /* SceneDelegate.swift */; };
-		D49C654F25EB64F900B342FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C654E25EB64F900B342FA /* ViewController.swift */; };
-		D49C655225EB64F900B342FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49C655025EB64F900B342FA /* Main.storyboard */; };
 		D49C655425EB64F900B342FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D49C655325EB64F900B342FA /* Assets.xcassets */; };
 		D49C655725EB64F900B342FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49C655525EB64F900B342FA /* LaunchScreen.storyboard */; };
+		D4DCEE8725EB6A7F00A290E0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCEE8625EB6A7F00A290E0 /* Task.swift */; };
+		D4DCEE8A25EBBCE800A290E0 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCEE8925EBBCE800A290E0 /* ProjectViewController.swift */; };
+		D4DCEE8D25EBBD4800A290E0 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DCEE8C25EBBD4800A290E0 /* TemplateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30B61FC88316AF6046190137 /* Pods-mandara.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mandara.release.xcconfig"; path = "Target Support Files/Pods-mandara/Pods-mandara.release.xcconfig"; sourceTree = "<group>"; };
 		5B8AA8A1E69CCD0056E20C40 /* Pods-mandara.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mandara.debug.xcconfig"; path = "Target Support Files/Pods-mandara/Pods-mandara.debug.xcconfig"; sourceTree = "<group>"; };
 		7F9A53A1E824FAF31D1AAFFF /* Pods_mandara.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mandara.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46E0A5E2606EE7300836773 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		D46E0A5F2606EE7300836773 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		D46E0A632606F7F400836773 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D46FC1F72605E2D800A7A8DA /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		D48DA23526064E9B00880126 /* projectInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = projectInputViewController.swift; sourceTree = "<group>"; };
+		D48E4E6025F3BD1A00D7C9B8 /* MandaraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandaraViewController.swift; sourceTree = "<group>"; };
+		D48E4E6325F3BE6600D7C9B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D48E4E6625F3D05C00D7C9B8 /* MandaraItemInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandaraItemInputViewController.swift; sourceTree = "<group>"; };
 		D49C654725EB64F900B342FA /* mandara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mandara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49C654A25EB64F900B342FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49C654C25EB64F900B342FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D49C654E25EB64F900B342FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D49C655125EB64F900B342FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D49C655325EB64F900B342FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D49C655625EB64F900B342FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D49C655825EB64F900B342FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4DCEE8625EB6A7F00A290E0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		D4DCEE8925EBBCE800A290E0 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		D4DCEE8C25EBBD4800A290E0 /* TemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +74,6 @@
 				5B8AA8A1E69CCD0056E20C40 /* Pods-mandara.debug.xcconfig */,
 				30B61FC88316AF6046190137 /* Pods-mandara.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,9 +99,18 @@
 			isa = PBXGroup;
 			children = (
 				D49C654A25EB64F900B342FA /* AppDelegate.swift */,
+				D46E0A5E2606EE7300836773 /* PostTableViewCell.swift */,
+				D46E0A5F2606EE7300836773 /* PostTableViewCell.xib */,
 				D49C654C25EB64F900B342FA /* SceneDelegate.swift */,
-				D49C654E25EB64F900B342FA /* ViewController.swift */,
-				D49C655025EB64F900B342FA /* Main.storyboard */,
+				D4DCEE8925EBBCE800A290E0 /* ProjectViewController.swift */,
+				D48E4E6025F3BD1A00D7C9B8 /* MandaraViewController.swift */,
+				D48E4E6625F3D05C00D7C9B8 /* MandaraItemInputViewController.swift */,
+				D48E4E6325F3BE6600D7C9B8 /* Main.storyboard */,
+				D46E0A632606F7F400836773 /* HomeViewController.swift */,
+				D4DCEE8C25EBBD4800A290E0 /* TemplateViewController.swift */,
+				D48DA23526064E9B00880126 /* projectInputViewController.swift */,
+				D4DCEE8625EB6A7F00A290E0 /* Task.swift */,
+				D46FC1F72605E2D800A7A8DA /* Temp.swift */,
 				D49C655325EB64F900B342FA /* Assets.xcassets */,
 				D49C655525EB64F900B342FA /* LaunchScreen.storyboard */,
 				D49C655825EB64F900B342FA /* Info.plist */,
@@ -151,9 +177,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48E4E6425F3BE6600D7C9B8 /* Main.storyboard in Resources */,
 				D49C655725EB64F900B342FA /* LaunchScreen.storyboard in Resources */,
 				D49C655425EB64F900B342FA /* Assets.xcassets in Resources */,
-				D49C655225EB64F900B342FA /* Main.storyboard in Resources */,
+				D46E0A612606EE7300836773 /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +233,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D49C654F25EB64F900B342FA /* ViewController.swift in Sources */,
+				D48E4E6725F3D05C00D7C9B8 /* MandaraItemInputViewController.swift in Sources */,
+				D46FC1F82605E2D800A7A8DA /* Temp.swift in Sources */,
+				D4DCEE8A25EBBCE800A290E0 /* ProjectViewController.swift in Sources */,
+				D4DCEE8725EB6A7F00A290E0 /* Task.swift in Sources */,
+				D4DCEE8D25EBBD4800A290E0 /* TemplateViewController.swift in Sources */,
 				D49C654B25EB64F900B342FA /* AppDelegate.swift in Sources */,
+				D48DA23626064E9B00880126 /* projectInputViewController.swift in Sources */,
+				D46E0A642606F7F400836773 /* HomeViewController.swift in Sources */,
+				D46E0A602606EE7300836773 /* PostTableViewCell.swift in Sources */,
+				D48E4E6125F3BD1A00D7C9B8 /* MandaraViewController.swift in Sources */,
 				D49C654D25EB64F900B342FA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,14 +250,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D49C655025EB64F900B342FA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D49C655125EB64F900B342FA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D49C655525EB64F900B342FA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
